@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: aquamarine;
+            overflow: hidden;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        input{
+            margin: 5px;
+            padding: 0 5px 0 5px;
+            align-items: center;
+        }
+        .head{
+            margin-bottom: 10px;
+        }
+        </style>
+    <title>usertable</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            user table
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <td>
+                        <label for="lname">username</label>
+                        <input type="text" name="username" id="lname" placeholder="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lemail">useremail</label>
+                        <input type="email" name="useremail" id="lemail" placeholder="user email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lpassword">password</label>
+                        <input type="password" name="password" id="lpassword" placeholder="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lrollnumber">roll number</label>
+                        <input type="number" name="roll number" id="lrollnumber" placeholder="rollnumber">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
