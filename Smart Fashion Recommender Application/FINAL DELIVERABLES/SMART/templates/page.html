@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  Load CSS in Flask with html-->
+    <link rel="stylesheet" href='/static/style.css' />
+ 
+<!--  Load JavaScript in Flask with html-->
+  <!-- <script>
+    alert("Page has been loaded successfully")
+  </script>-->
+ <script src="/static/app.js" defer></script> 
+
+    <script src="/static/response.js" defer></script>
+  </head>
+  <body>
+    <div class="cnt">
+        <center><h2>Hi {{vrb}}</h2></center>
+        
+        </div>
+        <marquee>Welcome to Cedric Fashion Store</marquee>
+        
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+         <a href="/shirts" target="_blank"> <img src="{{url_for('static', filename='shirt.jpg')}}" height="500px" width="350px"></a>
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <a href="/chudr" target="_blank"><img src="{{url_for('static', filename='chu.jpg')}}" height="500px" width="300px"></a>
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <a href="/jk" target="_blank"><img src="{{url_for('static', filename='jkin.jpg')}}" height="500px" width="300px"></a>
+          <div class="text">Caption Three</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+        
+        <div class="container">
+          <div class="chat-header">
+            <div class="logo">
+              <img src="{{url_for('static', filename='cbts.jpg')}}" alt="cwt" />
+            </div>
+            <div class="title">Let's Chat</div>
+          </div>
+          <div class="chat-body"></div>
+          <div class="chat-input">
+            <div class="input-sec">
+              <input type="text" id="txtInput" placeholder="Type here" autofocus />
+            </div>
+            <div class="send">
+              <img src="{{url_for('static', filename='send.png')}}" alt="send" height="10px"/>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+        </script>
+        
+  </body>
+</html>
